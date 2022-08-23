@@ -1,8 +1,17 @@
+const query = document.querySelector(".mobile-nav-wrap")
+
 function fadeInPage() {
     if (!window.AnimationEvent) return;
     var fader = document.getElementById('fader');
     fader.classList.add('fade-out');
 }
+
+function deviceType() {
+    var ua = navigator.userAgent;
+    if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+        document.getElementById('subText').remove();
+    }
+};
 
 document.addEventListener('DOMContentLoaded', function () {
     if (!window.AnimationEvent) return;
@@ -35,4 +44,5 @@ window.addEventListener('pageshow', function (event) {
     fader.classList.remove('fade-in');
 });
 
+deviceType()
 fadeInPage() //now we fade in the page
