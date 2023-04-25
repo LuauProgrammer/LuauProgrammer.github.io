@@ -5,24 +5,24 @@ function fadeInPage() {
     var fader = document.getElementById('fader');
     fader.classList.add('fade-out');
 }
-
+/*
 function deviceType() {
-    var ua = navigator.userAgent;
-    if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+    var userAgent = navigator.userAgent;
+    if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(userAgent)) {
         document.getElementById('subText').remove();
     }
 };
-
+*/
 document.addEventListener('DOMContentLoaded', function () {
     if (!window.AnimationEvent) return;
     var anchors = document.getElementsByTagName('a');
 
-    for (var idx = 0; idx < anchors.length; idx += 1) {
-        if (anchors[idx].hostname !== window.location.hostname ||
-            anchors[idx].pathname === window.location.pathname) {
+    for (var index = 0; index < anchors.length; index += 1) {
+        if (anchors[index].hostname !== window.location.hostname ||
+            anchors[index].pathname === window.location.pathname) {
             continue;
         }
-        anchors[idx].addEventListener('click', function (event) {
+        anchors[index].addEventListener('click', function (event) {
             var fader = document.getElementById('fader'),
                 anchor = event.currentTarget;
 
@@ -44,5 +44,5 @@ window.addEventListener('pageshow', function (event) {
     fader.classList.remove('fade-in');
 });
 
-deviceType()
+//deviceType()
 fadeInPage() //now we fade in the page
