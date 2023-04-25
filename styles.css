@@ -70,6 +70,10 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.hyperlink {
+    color: #000000;
+}
+
 #fader {
     position: fixed;
     top: 0;
