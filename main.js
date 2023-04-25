@@ -5,14 +5,14 @@ function fadeInPage() {
     var fader = document.getElementById('fader');
     fader.classList.add('fade-out');
 }
-/*
+
 function deviceType() {
     var userAgent = navigator.userAgent;
     if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(userAgent)) {
-        document.getElementById('subText').remove();
+        document.getElementById('switchPage').remove();
     }
 };
-*/
+
 document.addEventListener('DOMContentLoaded', function () {
     if (!window.AnimationEvent) return;
     var anchors = document.getElementsByTagName('a');
@@ -44,5 +44,5 @@ window.addEventListener('pageshow', function (event) {
     fader.classList.remove('fade-in');
 });
 
-//deviceType()
+deviceType()
 fadeInPage() //now we fade in the page
